@@ -18,8 +18,58 @@ After cloning the repo and opening Neovim, `lazy.nvim` will automatically instal
 ### Mason
 Once the plugins are installed, run `:Mason` in Neovim to select which linters/formatters to use.
 
+## Keybindings and Commands
+
+The leader key is set to `space`. For example, `<leader>e` means pressing `space` then `e`.
+
+> **Note**: The keybindings listed here are based on a common setup. You can find the specific configurations in `nvim/lua/fred/keymaps.lua` and your LSP plugin file.
+
+### General & Window Management
+
+| Key | Description |
+|---|---|
+| `<C-h>` | Navigate to the window on the left |
+| `<C-j>` | Navigate to the window below |
+| `<C-k>` | Navigate to the window above |
+| `<C-l>` | Navigate to the window on the right |
+| `<leader>nh` | Clear search highlights |
+| `<leader>e` | Toggle the file explorer (`nvim-tree`) |
+
+### Telescope (Fuzzy Finder)
+
+| Key | Description |
+|---|---|
+| `<leader>ff` | Find files in the project |
+| `<leader>fg` | Search for a string in the project (Live Grep) |
+| `<leader>fb` | Find and switch between open buffers |
+| `<leader>fh` | Search help tags |
+
+### LSP (Language Server Protocol)
+
+These keybindings are active in buffers with an attached LSP server.
+
+| Key | Description |
+|---|---|
+| `gd` | Go to definition |
+| `K` | Show hover documentation |
+| `gi` | Go to implementation |
+| `gr` | Show references |
+| `<leader>rn` | Rename symbol |
+| `<leader>ca` | Show code actions |
+| `[d` | Go to the previous diagnostic |
+| `]d` | Go to the next diagnostic |
+| `<leader>dl` | Show line diagnostics in a floating window |
+
+### Useful Commands
+
+| Command | Description |
+|---|---|
+| `:Lazy` | Open the lazy.nvim interface to manage plugins. |
+| `:Mason` | Open the Mason interface to manage LSPs, formatters, etc. |
+| `:LspInfo` | Show information about active LSP clients. |
+
 ## Fonts
-I'm using Meslo from [Nerd Font](https://www.nerdfonts.com/) which I uploaded in this repo. Install them for all the fancy icons to display correctly in your terminal. It's not strictly needed, but it makes working in the terminal nicer.
+I'm using Meslo from Nerd Font which I uploaded in this repo. Install them for all the fancy icons to display correctly in your terminal. It's not strictly needed, but it makes working in the terminal nicer.
  - **iTerm2**: open iTerm2 → Preferences → Profiles → Text and set Font to MesloLGS NF.
 
 ## Preview
